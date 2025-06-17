@@ -1,0 +1,12 @@
+version: "3.10"
+
+services:
+  bot-pos:
+    build:
+      context: ./pos/
+      dockerfile: Dockerfile
+    container_name: aiogram_bot_linzy_pos
+    restart: always
+    volumes:
+      - ./pos/db.json:/app/db.json  # Монтируем конкретный JSON-файл
+      - .:/app  # Остальной код проекта
