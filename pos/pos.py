@@ -47,7 +47,7 @@ def get_keyboard_buttons(user_id: int = None):
             KeyboardButton(text="📝 Заказать линзы"),
         ],
     ]
-    if user_id in [795677145]:
+    if user_id in [795677145, 7698119272]:
         buttons.append([
             KeyboardButton(text="✍️ Отправить рассылку"),
             KeyboardButton(text="🛠 Обработать"),
