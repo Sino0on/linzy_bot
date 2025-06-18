@@ -88,9 +88,8 @@ async def process_contact(message: types.Message, state: FSMContext):
     if message.contact is not None:
         user_phone = message.contact.phone_number
         await message.answer(
-            f"""Приветствуем вас в мире уюта и тепла – Ques Home!
-Этот бот – ваш личный помощник: следите за бонусами, историей покупок и делитесь впечатлениями.
-Ощущение дома в каждой детали!
+            f"""Приветствуем вас в магазине – Linzy Kg!
+Этот бот – ваш личный помощник: следите за бонусами, историей покупок. А также бот будет вас оповещать о новостях магазина
 """,
             reply_markup=get_keyboard_buttons(message.from_user.id),
         )
