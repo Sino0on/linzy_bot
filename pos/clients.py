@@ -35,7 +35,7 @@ def get_user_info_by_id(user_id: str):
         result = response.json()
     else:
         return None
-
+    pprint(result["data"])
     for user in result["data"]:
         if user["_id"] == user_id:
             pprint(user)

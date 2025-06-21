@@ -40,7 +40,7 @@ def get_keyboard_buttons(user_id: int = None):
     buttons = [
         [
             KeyboardButton(text="📊 Информация по счету"),
-            KeyboardButton(text="📇 Баланс счёта"),
+            KeyboardButton(text="📇 Моя скидка"),
         ],
         [
             KeyboardButton(text="💳 Виртуальная карта"),

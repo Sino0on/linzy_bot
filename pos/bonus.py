@@ -23,7 +23,7 @@ def get_keyboard_buttons(user_id: int = None):
     buttons = [
         [
             KeyboardButton(text="📊 Информация по счету"),
-            KeyboardButton(text="📇 Баланс счёта"),
+            KeyboardButton(text="📇 Моя скидка"),
         ],
         [
             KeyboardButton(text="💳 Виртуальная карта"),
@@ -61,12 +61,12 @@ async def send_product(message: types.Message) -> None:
     await message.answer(f'💰 Потрачено всего: {0 if user.get("debt", None) else user.get("debt", None)}\n{text}')
 
 
-@router.message(F.text == "📇 Баланс счёта")
+@router.message(F.text == "📇 Моя скидка")
 async def send_product(message: types.Message) -> None:
-    await message.answer("Баланс вычисляется, подождите немного. ⏳")
+    await message.answer("Скидка вычисляется, подождите немного. ⏳")
     user = find_client_by_user_id(message.from_user.id)
     user = get_user_info_by_id(user['id'])
-    await message.answer(f'🧾 Баланс бонусов: {user.get("debt")}')
+    await message.answer(f'🧾 Ваша скидка: {user.get("discount")}')
 
 
 @router.message(F.text == "💳 Виртуальная карта")
